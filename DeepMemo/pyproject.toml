@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepmemo"
+version = "1.0.0"
+description = "DeepMemo - AI assisted study and review app"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "streamlit>=1.0",
+  "httpx>=0.23",
+  "openai>=1.0",
+  "python-dotenv>=1.0",
+  "fastapi>=0.95",
+  "uvicorn[standard]>=0.22",
+  "pytest>=7.0",
+  "pytest-cov>=4.0",
+  "fsrs>=6.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"
